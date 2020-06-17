@@ -7,7 +7,9 @@ public class EnemyBehavior : MonoBehaviour
 {
     float randomDir;
 
-    Collider2D floorColl;
+    float speed = 2.0f;
+    public Transform childTrans;
+    float enemyDir = 1.0f;
 
 
     // Start is called before the first frame update
@@ -16,16 +18,13 @@ public class EnemyBehavior : MonoBehaviour
         randomDir = Mathf.Round(Random.Range(-1, 1));
         print(randomDir);
 
-        // find floor
-        floorColl = GameObject.FindGameObjectWithTag("floor").GetComponent<Collider2D>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        // give random dir
-        //enemyMovement();
+        enemyMovement();
     }
 
 
@@ -34,24 +33,24 @@ public class EnemyBehavior : MonoBehaviour
 
     } 
 
+
     void enemyMovement()
-    {   
-
-    }
-
-
-    // if at end of platform invert dir.x
-
-    /*
-    private void OnCollisionStay2D(Collision2D c)
     {
-        if (c.collider.IsTouching(floorColl))
+        transform.position = transform.position + Vector3.right * Time.deltaTime * speed * enemyDir;
+
+        // check if child spots the floor
+        RaycastHit2D floorInfo = Physics2D.Raycast(childTrans.position, Vector2.down);
+        if (floorInfo.collider == false)
         {
-            print("touching floor");
-            //keep walking untill end of platform
-            transform.position = transform.position + new Vector3(Time.deltaTime * 3, 0, 0);
+            print("not touching");
+            // flip
+            enemyDir = enemyDir * -1.0f;
+            transform.localScale = new Vector3(enemyDir,1,1);
+
         }
+        
     }
-    */
+
+
 
 }

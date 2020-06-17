@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - floor
   - goal
+  - edge
   layers:
   - Default
   - TransparentFX
