@@ -8,8 +8,7 @@ public class EnemyBehavior : MonoBehaviour
     float randomDir;
 
     Collider2D floorColl;
-    Collider2D playerColl;
-    Collider2D enemyColl;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +18,7 @@ public class EnemyBehavior : MonoBehaviour
 
         // find floor
         floorColl = GameObject.FindGameObjectWithTag("floor").GetComponent<Collider2D>();
-        // find player
-        playerColl = GameObject.FindGameObjectWithTag("player").GetComponent<Collider2D>();
+
     }
 
     // Update is called once per frame
@@ -41,14 +39,7 @@ public class EnemyBehavior : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D c)
-    {
-        // when playerColl touches enemyColl
-        if (c.collider == playerColl)
-        {
-            SceneManager.LoadScene(0);
-        }
-    }
+
     // if at end of platform invert dir.x
 
     /*
