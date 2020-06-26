@@ -18,9 +18,14 @@ public class GameManager : MonoBehaviour
     }
 
     //buttons
-    public void StartGame()
+    public void StartLevel1()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void StartLevel2()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void Exit()

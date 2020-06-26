@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         // when playerColl enters goal
         else if (c.collider == goalColl)
         {
+            // send to next level
             SceneManager.LoadScene(0);
         }
     }
