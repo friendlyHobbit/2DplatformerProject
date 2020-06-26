@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Collider2D enemyColl;
     Collider2D goalColl;
     Collider2D spikeColl;
+    Collider2D enemyWeakspotColl;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
         playerColl = GameObject.FindGameObjectWithTag("player").GetComponent<Collider2D>();
         // find enemy
         enemyColl = GameObject.FindGameObjectWithTag("enemy").GetComponent<Collider2D>();
+        // find enemy weakspot
+        enemyWeakspotColl = GameObject.FindGameObjectWithTag("enemy").GetComponentInChildren<Collider2D>();
+        print(enemyWeakspotColl);
         //find goal
         goalColl = GameObject.FindGameObjectWithTag("goal").GetComponent<Collider2D>();
         // find spikes
