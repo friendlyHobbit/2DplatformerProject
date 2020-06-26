@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    float randomDir;
 
-    float speed = 2.0f;
+    public float speed;
     public Transform childTrans;
     float enemyDir = 1.0f;
 
@@ -15,9 +14,6 @@ public class EnemyBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        randomDir = Mathf.Round(Random.Range(-1, 1));
-        print(randomDir);
-
 
     }
 

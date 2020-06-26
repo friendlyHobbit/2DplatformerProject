@@ -9,6 +9,7 @@ TagManager:
   - floor
   - goal
   - edge
+  - spike
   layers:
   - Default
   - TransparentFX

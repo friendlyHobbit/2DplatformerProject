@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     Collider2D playerColl;
     Collider2D enemyColl;
     Collider2D goalColl;
+    Collider2D spikeColl;
 
 
     // Start is called before the first frame update
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
         enemyColl = GameObject.FindGameObjectWithTag("enemy").GetComponent<Collider2D>();
         //find goal
         //goalColl = GameObject.FindGameObjectWithTag("goal").GetComponent<Collider2D>();
+        // find spikes
+        spikeColl = GameObject.FindGameObjectWithTag("spike").GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,12 @@ public class PlayerMovement : MonoBehaviour
         }
         // when playerColl enters goal
         else if (c.collider == goalColl)
+        {
+            // send to next level
+            SceneManager.LoadScene(0);
+        }
+        // when playerColl touches spikes
+        else if (c.collider == spikeColl)
         {
             // send to next level
             SceneManager.LoadScene(0);
