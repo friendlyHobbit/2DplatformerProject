@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         // find enemy
         enemyColl = GameObject.FindGameObjectWithTag("enemy").GetComponent<Collider2D>();
         //find goal
-        //goalColl = GameObject.FindGameObjectWithTag("goal").GetComponent<Collider2D>();
+        goalColl = GameObject.FindGameObjectWithTag("goal").GetComponent<Collider2D>();
         // find spikes
         spikeColl = GameObject.FindGameObjectWithTag("spike").GetComponent<Collider2D>();
     }
