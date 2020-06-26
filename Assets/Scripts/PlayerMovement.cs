@@ -33,12 +33,12 @@ public class PlayerMovement : MonoBehaviour
     void playerMovement()
     {
         // player presses left arrow
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) | Input.GetKey(KeyCode.A))
         {
             transform.position = transform.position + new Vector3(-Time.deltaTime * 5, 0, 0);
         }
         // player presses right arrow
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) | Input.GetKey(KeyCode.K))
         {
             transform.position = transform.position + new Vector3(Time.deltaTime * 5, 0, 0);
         }
