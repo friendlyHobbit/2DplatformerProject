@@ -35,7 +35,7 @@ public class EnemyBehavior : MonoBehaviour
         transform.position = transform.position + Vector3.right * Time.deltaTime * speed * enemyDir;
 
         // check if child spots the floor
-        RaycastHit2D floorInfo = Physics2D.Raycast(childTrans.position, Vector2.down, 0.5f);
+        RaycastHit2D floorInfo = Physics2D.Raycast(childTrans.position, Vector2.down, 1.0f);
         print(floorInfo.collider);
         if (floorInfo.collider == false)
         {
