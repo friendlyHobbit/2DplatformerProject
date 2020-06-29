@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         // find enemy
         enemyColl = GameObject.FindGameObjectWithTag("enemy").GetComponent<Collider2D>();
         // find enemy weakspot
-        enemyWeakspotColl = GameObject.FindGameObjectWithTag("enemy").GetComponentInChildren<Collider2D>();
+        enemyWeakspotColl = GameObject.FindGameObjectWithTag("weakness").GetComponent<Collider2D>();
         print(enemyWeakspotColl);
         //find goal
         goalColl = GameObject.FindGameObjectWithTag("goal").GetComponent<Collider2D>();
@@ -46,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
         // player presses left arrow
         if (Input.GetKey(KeyCode.LeftArrow) | Input.GetKey(KeyCode.A))
         {
-            //transform.position = transform.position + new Vector3(-Time.deltaTime * playerSpeed, 0, 0);
             playerDir = 1.0f;
             transform.localScale = new Vector3(playerDir, 1, 1);
             transform.position = transform.position + Vector3.left * Time.deltaTime * playerSpeed;
@@ -54,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
         // player presses right arrow
         else if (Input.GetKey(KeyCode.RightArrow) | Input.GetKey(KeyCode.K))
         {
-            //transform.position = transform.position + new Vector3(Time.deltaTime * playerSpeed, 0, 0);
             playerDir = -1.0f;
             transform.localScale = new Vector3(playerDir, 1, 1);
             transform.position = transform.position + Vector3.right * Time.deltaTime * playerSpeed;
@@ -69,6 +67,13 @@ public class PlayerMovement : MonoBehaviour
         if (c.collider == enemyColl)
         {
             SceneManager.LoadScene(0);
+        }
+        // when playerColl enters enemy´s weak spot
+        if (c.collider == enemyWeakspotColl)
+        {
+            // destroy enemey
+            GameObject enemy = enemyWeakspotColl.gameObject;
+            print("kill");
         }
         // when playerColl enters goal
         else if (c.collider == goalColl)

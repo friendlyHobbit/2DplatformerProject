@@ -36,7 +36,6 @@ public class EnemyBehavior : MonoBehaviour
 
         // check if child spots the floor
         RaycastHit2D floorInfo = Physics2D.Raycast(childTrans.position, Vector2.down, 1.0f);
-        print(floorInfo.collider);
         if (floorInfo.collider == false)
         {
             // flip
