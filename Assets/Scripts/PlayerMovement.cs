@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float playerSpeed = 10.0f;
+
+    float playerDir;
+
     Collider2D playerColl;
     Collider2D enemyColl;
     Collider2D goalColl;
@@ -42,12 +46,18 @@ public class PlayerMovement : MonoBehaviour
         // player presses left arrow
         if (Input.GetKey(KeyCode.LeftArrow) | Input.GetKey(KeyCode.A))
         {
-            transform.position = transform.position + new Vector3(-Time.deltaTime * 5, 0, 0);
+            //transform.position = transform.position + new Vector3(-Time.deltaTime * playerSpeed, 0, 0);
+            playerDir = 1.0f;
+            transform.localScale = new Vector3(playerDir, 1, 1);
+            transform.position = transform.position + Vector3.left * Time.deltaTime * playerSpeed;
         }
         // player presses right arrow
         else if (Input.GetKey(KeyCode.RightArrow) | Input.GetKey(KeyCode.K))
         {
-            transform.position = transform.position + new Vector3(Time.deltaTime * 5, 0, 0);
+            //transform.position = transform.position + new Vector3(Time.deltaTime * playerSpeed, 0, 0);
+            playerDir = -1.0f;
+            transform.localScale = new Vector3(playerDir, 1, 1);
+            transform.position = transform.position + Vector3.right * Time.deltaTime * playerSpeed;
         }
     }
 
