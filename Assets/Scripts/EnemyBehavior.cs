@@ -10,24 +10,21 @@ public class EnemyBehavior : MonoBehaviour
     public Transform childTrans;
     float enemyDir = 1.0f;
 
+    Collider2D playerColl;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        // find enemy
+        playerColl = GameObject.FindGameObjectWithTag("player").GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         enemyMovement();
+        
     }
-
-
-    void playerCollision()
-    {
-
-    } 
 
 
     void enemyMovement()
@@ -43,9 +40,15 @@ public class EnemyBehavior : MonoBehaviour
             transform.localScale = new Vector3(enemyDir,1,1);
 
         }
-        
     }
 
-
+    void OnCollisionEnter2D(Collision2D c)
+    {
+        // when playerColl enters enemyColl
+        if (c.collider == playerColl)
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
 }

@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Collider2D enemyColl;
     Collider2D goalColl;
     Collider2D spikeColl;
-    Collider2D enemyWeakspotColl;
+    //Collider2D enemyWeakspotColl;
 
 
     // Start is called before the first frame update
@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
         // find enemy
         enemyColl = GameObject.FindGameObjectWithTag("enemy").GetComponent<Collider2D>();
         // find enemy weakspot
-        enemyWeakspotColl = GameObject.FindGameObjectWithTag("weakness").GetComponent<Collider2D>();
-        print(enemyWeakspotColl);
+        //enemyWeakspotColl = GameObject.FindGameObjectWithTag("weakness").GetComponent<Collider2D>();
+        //print(enemyWeakspotColl);
         //find goal
         goalColl = GameObject.FindGameObjectWithTag("goal").GetComponent<Collider2D>();
         // find spikes
@@ -63,20 +63,8 @@ public class PlayerMovement : MonoBehaviour
     // collision
     void OnCollisionEnter2D(Collision2D c)
     {
-        // when playerColl enters enemyColl
-        if (c.collider == enemyColl)
-        {
-            SceneManager.LoadScene(0);
-        }
-        // when playerColl enters enemy´s weak spot
-        if (c.collider == enemyWeakspotColl)
-        {
-            // destroy enemey
-            GameObject enemy = enemyWeakspotColl.gameObject;
-            print("kill");
-        }
         // when playerColl enters goal
-        else if (c.collider == goalColl)
+        if (c.collider == goalColl)
         {
             // send to next level
             SceneManager.LoadScene(0);
