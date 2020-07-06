@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3112195939992947235}
   - component: {fileID: 6985562642959115177}
   - component: {fileID: 8325356521835395312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: weakspot
   m_TagString: weakness
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2351495377020280836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ray
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 1385508395944098405}
   - component: {fileID: 4486014234233531200}
   - component: {fileID: 4486014234233531204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Enemy '
   m_TagString: enemy
   m_Icon: {fileID: 0}

@@ -19,12 +19,6 @@ public class Weakness : MonoBehaviour
         enemyColl = enemyObj.GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     void OnCollisionEnter2D(Collision2D c)
     {
