@@ -47,6 +47,7 @@ public class EnemyBehavior : MonoBehaviour
         // when playerColl enters enemyColl
         if (c.collider == playerColl)
         {
+            GameManager.currState = GameState.Lose;
             SceneManager.LoadScene(0);
         }
     }

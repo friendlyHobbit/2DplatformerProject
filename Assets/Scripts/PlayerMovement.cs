@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position = transform.position + Vector3.left * Time.deltaTime * playerSpeed;
         }
         // player presses right arrow
-        else if (Input.GetKey(KeyCode.RightArrow) | Input.GetKey(KeyCode.K))
+        else if (Input.GetKey(KeyCode.RightArrow) | Input.GetKey(KeyCode.D))
         {
             playerDir = -1.0f;
             transform.localScale = new Vector3(playerDir, 1, 1);
@@ -57,12 +57,14 @@ public class PlayerMovement : MonoBehaviour
         // when playerColl enters goal
         if (c.collider == goalColl)
         {
+            GameManager.currState = GameState.Win;
             // send to next level
             SceneManager.LoadScene(0);
         }
         // when playerColl touches spikes
         else if (c.collider == spikeColl)
         {
+            GameManager.currState = GameState.Lose;
             // send to next level
             SceneManager.LoadScene(0);
         }
