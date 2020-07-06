@@ -11,7 +11,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ExampleLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Adam1.unity
+    guid: cecf23c09f6ccf342b6133655c8f7c5f
+  - enabled: 1
+    path: Assets/Scenes/Adam2.unity
+    guid: 915899867a3dfa84a9f71acd7057a4d0
+  - enabled: 1
+    path: Assets/Scenes/David1.unity
+    guid: 6093feb134022a24a8e752c985a9edd5
+  - enabled: 1
+    path: Assets/Scenes/David2.unity
+    guid: 93a25c45151c1264fb3e048b046986b7
+  - enabled: 1
+    path: Assets/Scenes/Jihad1.unity
+    guid: f59f0b5a1a9bb3245a69a51e47202fbd
+  - enabled: 1
+    path: Assets/Scenes/Jihad2.unity
+    guid: ae64eaa57c1e92e4eb24546a3e8da34a
+  - enabled: 1
+    path: Assets/Scenes/Jocke1.unity
+    guid: c13f106f426eb5c488df429d0f42455b
+  - enabled: 1
+    path: Assets/Scenes/Jocke2.unity
+    guid: cfb3f835147d55944a213a45200a29c2
+  - enabled: 1
+    path: Assets/Scenes/Maksym1.unity
+    guid: 1ae9378e60896d640be26165791a0a2c
+  - enabled: 1
+    path: Assets/Scenes/Maksym2.unity
+    guid: 19e410a8546e6404c8294354817f2bfe
   m_configObjects: {}
