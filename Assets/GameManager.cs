@@ -43,10 +43,54 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
-    public void StartLevel2()
+    public void StartAdam1()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void StartAdam2()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void StartDavid1()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void StartDavid2()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void StartJihad1()
+    {
+        SceneManager.LoadScene(6);
+    }
+
+    public void StartJihad2()
+    {
+        SceneManager.LoadScene(7);
+    }
+
+    public void StartJocke1()
+    {
+        SceneManager.LoadScene(8);
+    }
+
+    public void StartJocke2()
+    {
+        SceneManager.LoadScene(9);
+    }
+
+    public void StartMaksym1()
+    {
+        SceneManager.LoadScene(10);
+    }
+
+    public void StartMaksym2()
+    {
+        SceneManager.LoadScene(11);
     }
 
     public void Exit()
