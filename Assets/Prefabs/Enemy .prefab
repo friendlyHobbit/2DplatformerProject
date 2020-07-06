@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3112195939992947235}
-  - component: {fileID: 6985562642959115177}
   - component: {fileID: 8325356521835395312}
+  - component: {fileID: 693786193958859764}
   m_Layer: 8
   m_Name: weakspot
   m_TagString: weakness
@@ -32,32 +32,6 @@ Transform:
   m_Father: {fileID: 4486014234233531203}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &6985562642959115177
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3753797283696036596}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.15, y: 2}
-  m_EdgeRadius: 0
 --- !u!114 &8325356521835395312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +44,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55a78362fe144e44a8beefa9e0f9eb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &693786193958859764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753797283696036596}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.15, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &3894113685996512886
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,5 +245,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fe3708abe90ec4e89830b9bcd5ab0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  enemySpeed: 5
   childTrans: {fileID: 2351495377020280836}

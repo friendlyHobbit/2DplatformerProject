@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class EnemyBehavior : MonoBehaviour
 {
 
-    public float speed;
+    public float enemySpeed;
     public Transform childTrans;
     float enemyDir = 1.0f;
 
     Collider2D playerColl;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +23,11 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyMovement();
-        
+        enemyMovement(enemySpeed);
     }
 
 
-    void enemyMovement()
+    void enemyMovement(float speed)
     {
         transform.position = transform.position + Vector3.right * Time.deltaTime * speed * enemyDir;
 

@@ -7,7 +7,6 @@ public class Weakness : MonoBehaviour
     Collider2D playerColl;
 
     GameObject enemyObj;
-    Collider2D enemyColl;
 
 
     // Start is called before the first frame update
@@ -16,18 +15,16 @@ public class Weakness : MonoBehaviour
         playerColl = GameObject.FindGameObjectWithTag("player").GetComponent<Collider2D>();
         
         enemyObj = this.transform.parent.gameObject;
-        enemyColl = enemyObj.GetComponent<Collider2D>();
     }
 
 
-    void OnCollisionEnter2D(Collision2D c)
+    void OnTriggerEnter2D(Collider2D c)
     {
         // when playerColl enters enemy´s weak spot
-        if (c.collider == playerColl)
+        if (c == playerColl)
         {
             // destroy enemey
             Destroy(enemyObj.gameObject);
-            print("kill");
         }
     }
 }
