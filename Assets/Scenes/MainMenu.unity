@@ -1967,7 +1967,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1711150763}
-        m_MethodName: StartLevel1
+        m_MethodName: StartAdam1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2352,7 +2352,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1711150763}
-        m_MethodName: StartLevel1
+        m_MethodName: StartDavid1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2482,7 +2482,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1711150763}
-        m_MethodName: StartLevel1
+        m_MethodName: StartJihad1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2768,7 +2768,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1711150763}
-        m_MethodName: StartLevel1
+        m_MethodName: StartJocke1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2977,7 +2977,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1711150763}
-        m_MethodName: StartLevel1
+        m_MethodName: StartMaksym1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -20,11 +20,11 @@ public class PlayerMovement : MonoBehaviour
         //find goal
         goalColl = GameObject.FindGameObjectWithTag("goal").GetComponent<Collider2D>();
         // find spikes
-        spikeColl = GameObject.FindGameObjectWithTag("spike").GetComponent<Collider2D>();
+        spikeColl = GameObject.FindGameObjectWithTag("spike").GetComponent<Collider2D>(); //will only get one spike object, if there are more they wont be recognized
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //use FixedUpdate for player movement
     {
         playerMovement();
 
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     void playerMovement()
     {
         // player presses left arrow
-        if (Input.GetKey(KeyCode.LeftArrow) | Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow) | Input.GetKey(KeyCode.A)) //Use input.getaxisraw to calculate movement
         {
             playerDir = 1.0f;
             transform.localScale = new Vector3(playerDir, 1, 1);
